@@ -2,15 +2,15 @@ import React, { useState, useEffect, Fragment } from 'react';
 import '../css/homepage.css';
 import book from '../imgs/book.png'
 
-function Homepage() {
+function Register() {
 
     const [isUser, setUser] = useState({
-        username: "",
+        email: "",
         password: ""
     });
 
-    function onChangeUser(e) {
-        setUser({ ...isUser, username: e.target.value })
+    function onChangeEmail(e) {
+        setUser({ ...isUser, email: e.target.value })
     }
 
     function onChangePass(e) {
@@ -26,9 +26,9 @@ function Homepage() {
             <div className="homepageDiv">
                 <div className="form">
                     <h1>SkillShare</h1>
-                    <h2>Username</h2>
+                    <h2>Email</h2>
                     <div className="inputDiv">
-                        <input className="input" onChange={(e) => onChangeUser(e)}></input>
+                        <input className="input" onChange={(e) => onChangeEmail(e)}></input>
                     </div>
                     <h2>Password</h2>
                     <div className="inputDiv">
@@ -39,12 +39,12 @@ function Homepage() {
                     <img src={book} className="bookImg"></img>
                 </div>
                 <div className="submit" onClick={() => submit()}>
-                    Login
+                    Register
                 </div>
-                <div className="register">Don't have an account? Register Here!</div>
+                <div className="register">Already have an account? Login here!</div>
             </div>
         </Fragment>
     );
 }
 
-export default Homepage;
+export default Register;
