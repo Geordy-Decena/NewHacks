@@ -50,7 +50,7 @@ function Login() {
                 <div className="submit" onClick={() => submit()}>
                     Login
                 </div>
-                <div className="register" onClick={() => register()}>Don't have an account? Register Here!</div>
+                <div className="register" onClick={() => register()}>Don't have an account? Register Here?</div>
             </div>
         </Fragment>
     );
